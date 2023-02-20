@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.invicta.qa.testcases.sbu.EditSbuFunTest">
+        <methods>
+          <include name="closeChrome"/>
+          <include name="NavigateSbu"/>
+          <include name="main"/>
+        </methods>
+      </class> <!-- com.invicta.qa.testcases.sbu.EditSbuFunTest -->
+      <class name="com.invicta.qa.testcases.sbu.EditSbuUITest">
+        <methods>
+          <include name="EditSBU"/>
+          <include name="closeChrome"/>
+          <include name="main"/>
+        </methods>
+      </class> <!-- com.invicta.qa.testcases.sbu.EditSbuUITest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
