@@ -15,13 +15,13 @@ import com.invicta.qa.pages.login.LoginPage;
 
 public class LoginTest extends DriverIntialization {
 
-	com.invicta.qa.pages.login.LoginPage loginpg = new com.invicta.qa.pages.login.LoginPage();
+	static com.invicta.qa.pages.login.LoginPage loginpg = new com.invicta.qa.pages.login.LoginPage();
 
 	@Test
-	public void Login() throws InterruptedException, IOException {
+	public static  void Login() throws InterruptedException, IOException {
 
 		PageFactory.initElements(driver, loginpg);
-
+ 
 		SoftAssert sa = new SoftAssert(); 
 		Thread.sleep(2000);
 		FileInputStream file = new FileInputStream(
