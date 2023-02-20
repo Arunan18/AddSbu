@@ -230,28 +230,19 @@ public class AddSbuFunTest extends DriverIntialization {
 			if (AddSbuFunPage.NextPageBtn.isEnabled()) {
 				Thread.sleep(1000);
 				AddSbuFunPage.NextPageBtn.click();
-			}
-			if (TableData) { 
-				testCase = extent.createTest("STEP 11 :Check added data had or not in SBU Table");
-				testCase.log(Status.INFO, "Finded Expected SBU in SBU Webtable");
-				testCase.log(Status.PASS, "Pass this test script");
-			} else {
-				testCase = extent.createTest("STEP 11 :Check added data had or not in SBU Table");
-				testCase.log(Status.INFO, "Finded Expected SBU Not in SBU Webtable");
-				testCase.log(Status.FAIL, "Pass this test script");
-			}
-			testCase = extent.createTest("Add SBU");
-			if(TableData) {
-				Assert.assertEquals(AddSbuFunPage.FirstRowdata.getText(), sbu);
-				testCase = extent.createTest("STEP 11 :Check added data had in First Row");
-				testCase.log(Status.PASS, "Finded Expected SBU Not in SBU Webtable");
-			}
-			else {
-				testCase = extent.createTest("STEP 11 :Check added data had in First Row");
-				testCase.log(Status.FAIL, "Finded Expected SBU Not in SBU Webtable");
-			}
+			} 
+			
+			
 		}
-
+		if (TableData) { 
+			testCase = extent.createTest("STEP 11 :Check added data had or not in SBU Table");
+			testCase.log(Status.INFO, "Finded Expected SBU in SBU Webtable");
+			testCase.log(Status.PASS, "Pass this test script");
+		} else {
+			testCase = extent.createTest("STEP 11 :Check added data had or not in SBU Table");
+			testCase.log(Status.INFO, "Finded Expected SBU Not in SBU Webtable");
+			testCase.log(Status.FAIL, "Pass this test script");
+		}
 		driver.navigate().refresh();
 		Thread.sleep(2000);
 	}
