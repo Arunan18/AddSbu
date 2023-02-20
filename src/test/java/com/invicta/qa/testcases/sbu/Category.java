@@ -23,7 +23,7 @@ public class Category extends DriverIntialization {
 		} catch (NoSuchElementException e) {
 			testCase.log(Status.INFO, TstCase + " ActualResults : " + ActualResults).assignCategory("Low-Severity");
 			testCase.log(Status.INFO, TstCase + " ExpectedResults : " + ExpectedResults).assignCategory("Low-Priority");
-			testCase.log(Status.FAIL, TstCase + " Script FAIL");
+			testCase.log(Status.FAIL, "Dont Have "+ TstCase + " Locator");
 		}
 	}
 
@@ -42,7 +42,7 @@ public class Category extends DriverIntialization {
 		} catch (NoSuchElementException e) {
 			testCase.log(Status.INFO, TstCase + " ActualResults : " + ActualResults).assignCategory("Low-Severity");
 			testCase.log(Status.INFO, TstCase + " ExpectedResults : " + ExpectedResults).assignCategory("Medium-Priority");
-			testCase.log(Status.FAIL, TstCase + " Script FAIL");
+			testCase.log(Status.FAIL, "Dont Have "+ TstCase + " Locator");
 		}
 	}
 
@@ -61,7 +61,7 @@ public class Category extends DriverIntialization {
 		} catch (NoSuchElementException e) {
 			testCase.log(Status.INFO, TstCase + " ActualResults : " + ActualResults).assignCategory("Low-Severity");
 			testCase.log(Status.INFO, TstCase + " ExpectedResults : " + ExpectedResults).assignCategory("High-Priority");
-			testCase.log(Status.FAIL, TstCase + " Script FAIL");
+			testCase.log(Status.FAIL, "Dont Have "+ TstCase + " Locator");
 		}
 	}
 
@@ -80,7 +80,7 @@ public class Category extends DriverIntialization {
 		} catch (NoSuchElementException e) {
 			testCase.log(Status.INFO, TstCase + " ActualResults : " + ActualResults).assignCategory("Medium-Severity");
 			testCase.log(Status.INFO, TstCase + " ExpectedResults : " + ExpectedResults).assignCategory("Low-Priority");
-			testCase.log(Status.FAIL, TstCase + " Script FAIL");
+			testCase.log(Status.FAIL, "Dont Have "+ TstCase + " Locator");
 		}
 	}
 
@@ -99,7 +99,7 @@ public class Category extends DriverIntialization {
 		} catch (NoSuchElementException e) {
 			testCase.log(Status.INFO, TstCase + " ActualResults : " + ActualResults).assignCategory("Medium-Severity");
 			testCase.log(Status.INFO, TstCase + " ExpectedResults : " + ExpectedResults).assignCategory("Medium-Priority");
-			testCase.log(Status.FAIL, TstCase + " Script FAIL");
+			testCase.log(Status.FAIL, "Dont Have "+ TstCase + " Locator");
 		}
 	}
 
@@ -118,7 +118,7 @@ public class Category extends DriverIntialization {
 		} catch (NoSuchElementException e) {
 			testCase.log(Status.INFO, TstCase + " ActualResults : " + ActualResults).assignCategory("Medium-Severity");
 			testCase.log(Status.INFO, TstCase + " ExpectedResults : " + ExpectedResults).assignCategory("High-Priority");
-			testCase.log(Status.FAIL, TstCase + " Script FAIL");
+			testCase.log(Status.FAIL, "Dont Have "+ TstCase + " Locator");
 		}
 	}
 
@@ -137,7 +137,7 @@ public class Category extends DriverIntialization {
 		} catch (NoSuchElementException e) {
 			testCase.log(Status.INFO, TstCase + " ActualResults : " + ActualResults).assignCategory("High-Severity");
 			testCase.log(Status.INFO, TstCase + " ExpectedResults : " + ExpectedResults).assignCategory("Low-Priority");
-			testCase.log(Status.FAIL, TstCase + " Script FAIL");
+			testCase.log(Status.FAIL, "Dont Have "+ TstCase + " Locator");
 		}
 	}
 
@@ -156,7 +156,7 @@ public class Category extends DriverIntialization {
 		} catch (NoSuchElementException e) {
 			testCase.log(Status.INFO, TstCase + " ActualResults : " + ActualResults).assignCategory("High-Severity");
 			testCase.log(Status.INFO, TstCase + " ExpectedResults : " + ExpectedResults).assignCategory("Medium-Priority");
-			testCase.log(Status.FAIL, TstCase + " Script FAIL");
+			testCase.log(Status.FAIL, "Dont Have "+ TstCase + " Locator");
 		}
 	}
 
@@ -175,7 +175,7 @@ public class Category extends DriverIntialization {
 		} catch (NoSuchElementException e) {
 			testCase.log(Status.INFO, TstCase + " ActualResults : " + ActualResults).assignCategory("High-Severity");
 			testCase.log(Status.INFO, TstCase + " ExpectedResults : " + ExpectedResults).assignCategory("High-Priority");
-			testCase.log(Status.FAIL, TstCase + " Script FAIL");
+			testCase.log(Status.FAIL, "Dont Have "+ TstCase + " Locator");
 		}
 	}
 }

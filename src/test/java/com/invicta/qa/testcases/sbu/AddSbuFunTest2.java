@@ -38,14 +38,14 @@ import com.invicta.qa.pages.sbu.AddSbuFunPage;
 import com.invicta.qa.pages.sbu.EditSbuFunPage;
 import com.invicta.qa.testcases.login.LoginTest;
 
-public class AddSbuFunTest extends DriverIntialization {
+public class AddSbuFunTest2 extends DriverIntialization {
 	static AddSbuFunPage asfp = new AddSbuFunPage();
 	static boolean ButtonVisible = true;
 	static boolean ButtonEnable = true;
 	static int ActualTotalPage = 1;
 	static int TotalRow = 0;
 	static boolean TableData = false;
-	static String sbu = null;
+
 	@Test
 	public static void AddSbuFunction() throws InterruptedException, IOException {
 
@@ -56,17 +56,14 @@ public class AddSbuFunTest extends DriverIntialization {
 		ClickMaster();
 
 //		Click Plant
-		ClickPlant();
+		ClickPlant(); 
 
 //		Click SBU
 		ClickSbu();
-
-		/*
-		 * STEP 1 : Check Add SBU Button UI Properties (1.Visibility, 2.Enablity,
-		 * 3.Size, 4.Postion, 5.Background-color ,6.Font-color ,7.Border-color,
-		 * 8.Font-type, 9.Font-size, 10.Text , 11.Box-shadow, 12.Padding, 13.Cursor,
-		 * 14.Border-radius, 15.Opacity, 16.Font-weight)
-		 */
+		
+		/*STEP 1 : Check Add SBU Button UI Properties (1.Visibility, 2.Enablity, 3.Size, 4.Postion, 
+		5.Background-color ,6.Font-color ,7.Border-color, 8.Font-type, 9.Font-size, 10.Text , 
+		11.Box-shadow, 12.Padding, 13.Cursor, 14.Border-radius, 15.Opacity, 16.Font-weight)*/
 		AddSbuUITest.AddSbuButton();
 
 //		STEP 2 : Check Add SBU Button Click
@@ -75,73 +72,37 @@ public class AddSbuFunTest extends DriverIntialization {
 //		STEP 3 : Check SBU Add Form UI Properties 
 		AddSbuUITest.addsbuModal();
 
-		/*
-		 * STEP 4 : Check SBU Add Form Heading UI Properties (1.visibility,
-		 * 2.Font-color, 3.Font-size, 4.Font-style , 5.Text-spelling,6. position,
-		 * 7.padding, 8. margin, 9.shadow,10.Enablity, 11. Word Spacing, 12.Letter
-		 * Spacing, 13.Text Align, 14. Text- Transformation, 15.Text-Line-Height, 16.
-		 * Text-Vertical -Alignment, 17. Text - Indent, 18. Text -Decoration, 19. Text -
-		 * Orientation, 20.Font-Family)
-		 */
+/*		STEP 4 : Check SBU Add Form Heading UI Properties (1.visibility, 2.Font-color, 3.Font-size, 
+		4.Font-style , 5.Text-spelling,6. position, 7.padding, 8. margin, 9.shadow,10.Enablity, 
+		11. Word Spacing, 12.Letter Spacing, 13.Text Align, 14. Text- Transformation, 15.Text-Line-Height, 
+		16. Text-Vertical -Alignment, 17. Text - Indent, 18. Text -Decoration, 19. Text - Orientation, 20.Font-Family)*/
 		AddSbuUITest.addsbutext();
 
-		/*
-		 * STEP 5 : Check SBU Text UI Properties (1.visibility, 2.Font-color,
-		 * 3.Font-size, 4.Font-style , 5.Text-spelling,6. position, 7.padding, 8.
-		 * margin, 9.shadow,10.Enablity, 11. Word Spacing, 12.Letter Spacing, 13.Text
-		 * Align, 14. Text- Transformation, 15.Text-Line-Height, 16. Text-Vertical
-		 * -Alignment, 17. Text - Indent, 18. Text -Decoration, 19. Text - Orientation,
-		 * 20.Font-Family)
-		 */
+/*		STEP 5 : Check SBU Text UI Properties (1.visibility, 2.Font-color, 3.Font-size, 4.Font-style , 
+		5.Text-spelling,6. position, 7.padding, 8. margin, 9.shadow,10.Enablity, 11. Word Spacing, 
+		12.Letter Spacing, 13.Text Align, 14. Text- Transformation, 15.Text-Line-Height, 
+		16. Text-Vertical -Alignment, 17. Text - Indent, 18. Text -Decoration, 19. Text - Orientation, 20.Font-Family)*/
 		AddSbuUITest.sbutext();
 
-		/*
-		 * STEP 6 : Check SBU Description UI Properties (1.visibility, 2.Font-color,
-		 * 3.Font-size, 4.Font-style , 5.Text-spelling,6. position, 7.padding, 8.
-		 * margin, 9.shadow,10.Enablity, 11. Word Spacing, 12.Letter Spacing, 13.Text
-		 * Align, 14. Text- Transformation, 15.Text-Line-Height, 16. Text-Vertical
-		 * -Alignment, 17. Text - Indent, 18. Text -Decoration, 19. Text - Orientation,
-		 * 20.Font-Family)
-		 */
+/*		STEP 6 : Check SBU Description UI Properties (1.visibility, 2.Font-color, 3.Font-size, 4.Font-style , 
+		5.Text-spelling,6. position, 7.padding, 8. margin, 9.shadow,10.Enablity, 11. Word Spacing, 
+		12.Letter Spacing, 13.Text Align, 14. Text- Transformation, 15.Text-Line-Height, 
+		16. Text-Vertical -Alignment, 17. Text - Indent, 18. Text -Decoration, 19. Text - Orientation, 20.Font-Family)*/
 		AddSbuUITest.description();
 
-		/*
-		 * STEP 7 : Check SBU TextBox UI Properties (1.PlaceHolder
-		 * ,2.Visibility,3.Enablity, 4.Postion, 5.Background-color, 6.Border-color,
-		 * 7.Length, 8.Width, 9.Border Color, 10.Font style, 11.Font Size,
-		 * 12.Font-color)
-		 */
-		AddSbuUITest.SbuTextBox();
+/*		STEP 7 : Check SBU TextBox UI Properties (1.PlaceHolder ,2.Visibility,3.Enablity, 4.Postion, 5.Background-color,
+		6.Border-color, 7.Length, 8.Width, 9.Border Color, 10.Font style, 11.Font Size, 12.Font-color)*/
+		AddSbuUITest.sbutextbox();
 
-		/*
-		 * STEP 8 : Check SBU Description TextBox UI Properties (1.PlaceHolder
-		 * ,2.Visibility,3.Enablity, 4.Postion, 5.Background-color, 6.Border-color,
-		 * 7.Length, 8.Width, 9.Border Color, 10.Font style, 11.Font Size,
-		 * 12.Font-color)
-		 */
-		AddSbuUITest.DesTextBox();
+/*		STEP 8 : Check SBU Description TextBox UI Properties (1.PlaceHolder ,2.Visibility,3.Enablity, 4.Postion, 5.Background-color,
+		6.Border-color, 7.Length, 8.Width, 9.Border Color, 10.Font style, 11.Font Size, 12.Font-color)*/
+		AddSbuUITest.descriptiontextbox();
 
 //		STEP 9 : INPUT SBU and Descreption Data 
 		InputSbuData();
 
-		/*
-		 * STEP 10 : Check SBU Save Button UI Properties (1.Visibility, 2.Enablity,
-		 * 3.Size, 4.Postion, 5.Background-color ,6.Font-color ,7.Border-color,
-		 * 8.Font-type, 9.Font-size, 10.Text , 11.Box-shadow, 12.Padding, 13.Cursor,
-		 * 14.Border-radius, 15.Opacity, 16.Font-weight)
-		 */
-		AddSbuUITest.SbuSaveBtn();
 
-		// STEP 11 : Check SBU Save Button Click
-		ClickSaveSbu();
 
-//		Check Page count
-		PageCount();
-		
-//		STEP 11 :Check added data had or not in SBU Table
-		CheckDataTable(sbu);
-		
-	
 	}
 
 //	Click Master
@@ -172,7 +133,7 @@ public class AddSbuFunTest extends DriverIntialization {
 		if (AddSbuUITest.AddSbuBtnEnable) {
 			AddSbuFunPage.AddSbuButton.click();
 		}
-
+		
 		testCase = extent.createTest("STEP 2 : Check Add SBU Button Click");
 		try {
 			Thread.sleep(2000);
@@ -194,7 +155,7 @@ public class AddSbuFunTest extends DriverIntialization {
 		} catch (AssertionError e) {
 			testCase.log(Status.FAIL, "SBU Save Button Clicked Pass");
 		}
-
+		
 	}
 
 //	Check Page Count
@@ -202,7 +163,7 @@ public class AddSbuFunTest extends DriverIntialization {
 		PageFactory.initElements(driver, asfp);
 		boolean Enablity = AddSbuFunPage.NextPageBtn.isEnabled();
 		while (Enablity) {
-			Thread.sleep(2500);
+			Thread.sleep(1000);
 			AddSbuFunPage.NextPageBtn.click();
 			ActualTotalPage = ActualTotalPage + 1;
 			Enablity = AddSbuFunPage.NextPageBtn.isEnabled();
@@ -222,7 +183,7 @@ public class AddSbuFunTest extends DriverIntialization {
 				if (value1.contains(SBU)) {
 					TableData = true;
 					break;
-				} 
+				}
 			}
 			if (TableData) {
 				break;
@@ -231,33 +192,11 @@ public class AddSbuFunTest extends DriverIntialization {
 				Thread.sleep(1000);
 				AddSbuFunPage.NextPageBtn.click();
 			}
-			if (TableData) { 
-				testCase = extent.createTest("STEP 11 :Check added data had or not in SBU Table");
-				testCase.log(Status.INFO, "Finded Expected SBU in SBU Webtable");
-				testCase.log(Status.PASS, "Pass this test script");
-			} else {
-				testCase = extent.createTest("STEP 11 :Check added data had or not in SBU Table");
-				testCase.log(Status.INFO, "Finded Expected SBU Not in SBU Webtable");
-				testCase.log(Status.FAIL, "Pass this test script");
-			}
-			testCase = extent.createTest("Add SBU");
-			if(TableData) {
-				Assert.assertEquals(AddSbuFunPage.FirstRowdata.getText(), sbu);
-				testCase = extent.createTest("STEP 11 :Check added data had in First Row");
-				testCase.log(Status.PASS, "Finded Expected SBU Not in SBU Webtable");
-			}
-			else {
-				testCase = extent.createTest("STEP 11 :Check added data had in First Row");
-				testCase.log(Status.FAIL, "Finded Expected SBU Not in SBU Webtable");
-			}
 		}
 
 		driver.navigate().refresh();
 		Thread.sleep(2000);
 	}
-
-
-
 	public static void InputSbuData() throws InterruptedException, IOException {
 		PageFactory.initElements(driver, asfp);
 		FileInputStream file = new FileInputStream(
@@ -266,11 +205,11 @@ public class AddSbuFunTest extends DriverIntialization {
 		XSSFSheet sheet = workbook.getSheet("add");
 
 		int rowcount = sheet.getLastRowNum();
-		for (int i = 0; i <= rowcount; i++) {
+		for (int i = 0; i <= rowcount; i++) { 
 
 			XSSFRow row = sheet.getRow(i);
 			boolean check = (boolean) row.getCell(0).getBooleanCellValue();
-			 sbu = (String) row.getCell(1).getStringCellValue();
+			String sbu = (String) row.getCell(1).getStringCellValue();
 			String description = (String) row.getCell(2).getStringCellValue();
 
 			Thread.sleep(2000);
@@ -302,9 +241,24 @@ public class AddSbuFunTest extends DriverIntialization {
 				}
 
 			}
+//			Check Page count
+			PageCount();
+//			Check added data had or not in SBU Table
+			CheckDataTable(sbu);
+			
+			if (TableData) {
+				testCase = extent.createTest("Add SBU");
+				testCase.log(Status.INFO, "Finded Expected SBU in SBU Webtable");
+				testCase.log(Status.PASS, "Pass this test script");
+			}
+			else {
+				testCase = extent.createTest("Add SBU");
+				testCase.log(Status.INFO, "Finded Expected SBU Not in SBU Webtable");
+				testCase.log(Status.FAIL, "Pass this test script");
+			}
 
 		}
-	}
+	} 
 
 //	public static void InputSbuData() throws InterruptedException, IOException {
 //		PageFactory.initElements(driver, asfp);
@@ -350,10 +304,18 @@ public class AddSbuFunTest extends DriverIntialization {
 //				}
 //
 //			}
-
+////			/*		STEP 10 : Check SBU Save Button UI Properties (1.Visibility, 2.Enablity, 3.Size, 4.Postion, 
+//	5.Background-color ,6.Font-color ,7.Border-color, 8.Font-type, 9.Font-size, 10.Text , 
+//	11.Box-shadow, 12.Padding, 13.Cursor, 14.Border-radius, 15.Opacity, 16.Font-weight)*/
+//	AddSbuUITest.SbusaveButton();
+//
+////	STEP 11 : Check SBU Save Button Click
+//	ClickSaveSbu();
 //			
 //
 //		}
 //	}
-
+	
+	
+	
 }

@@ -26,4 +26,6 @@ public class AddSbuFunPage {
 	public static List<WebElement> SbuNameColumn;
 	@FindBy(xpath = "//li[@title='Next Page']/button")
 	public static WebElement NextPageBtn;
+	@FindBy(xpath = "//tbody[@class='ant-table-tbody']/tr[2]/td[1]")
+	public static WebElement FirstRowdata;
 }

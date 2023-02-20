@@ -2285,7 +2285,7 @@ PageFactory.initElements(driver, sbuui);
 
 						// text font size
 
-						String Actualtextsize = AddSbuUIPage.SBUtextbox.getCssValue("font-size");
+						String Actualtextsize = AddSbuUIPage.SBUtextbox.getCssValue("font-size"); 
 
 						String Expectedtextsize = "14px";
 						System.out.println("font size :" + Actualtextsize);
@@ -2303,7 +2303,7 @@ PageFactory.initElements(driver, sbuui);
 
 						// text font style
 
-						String Actualtextstyle = AddSbuUIPage.SBUtextbox.getCssValue("font-style");
+						String Actualtextstyle = AddSbuUIPage.SBUtextbox.getCssValue("font-style"); 
 
 						String Expectedtextstyle = "normal";
 						System.out.println("font style :" + Actualtextstyle);
@@ -2320,7 +2320,7 @@ PageFactory.initElements(driver, sbuui);
 						}
 
 						// SIZE
-						Dimension ActualSize = AddSbuUIPage.SBUtextbox.getSize();
+						Dimension ActualSize = AddSbuUIPage.SBUtextbox.getSize(); 
 						System.out.println("Size :" + ActualSize);
 						Dimension ExpectedSize = new Dimension(256, 32);
 
@@ -2390,7 +2390,7 @@ PageFactory.initElements(driver, sbuui);
 	public static void descriptiontextbox() throws InterruptedException {
 
 		System.out.println("*******Add Description Field TextBox Start********");
-
+ 
 		PageFactory.initElements(driver, sbuui);
 
 		try {
@@ -2598,7 +2598,7 @@ PageFactory.initElements(driver, sbuui);
 		boolean ActualElement = AddSbuUIPage.SBUsavebutton.isDisplayed();
 		boolean ExpectedElement = true;
 
-		boolean visibility = true;
+		boolean visibility = true; 
 		testCase = extent.createTest("STEP 10 : Check SBU Save Button-VISIBILITY");
 		try {
 			AssertJUnit.assertEquals(ActualElement, ExpectedElement);
@@ -2664,7 +2664,7 @@ PageFactory.initElements(driver, sbuui);
 		try {
 			AssertJUnit.assertEquals(ActualFontSize, ExpectedFontSize);
 
-		} catch (AssertionError e) {
+		} catch (AssertionError e) { 
 			Fontsize = false;
 		}
 		if (Fontsize) {
@@ -2982,32 +2982,64 @@ PageFactory.initElements(driver, sbuui);
 		Thread.sleep(2000);
 	}
 
-//	*****************************************************
+//	****************************************************************************************************************
+	
 	static AddSbuUIPage asup = new AddSbuUIPage();
 	static boolean AddSbuBtnVisible = true;
 	static boolean AddSbuBtnEnable = true;
+	static boolean SbuTextBoxVisible = true;
+	static boolean SbuTextBoxEnable = true;
+	static boolean SbuDesTextBoxVisible = true;
+	static boolean SbuDesTextBoxEnable = true;
+	static boolean SaveSbuBtnVisible = true;
+	static boolean SaveSbuBtnEnable = true;
  
-	public static void AddSbuButton() {
-		PageFactory.initElements(driver, asup);
+	public static void AddSbuButton() { 
+		PageFactory.initElements(driver, asup); 
 		try {
-			Category.LowLow("ADD SBU BUTTON VISIBLE", String.valueOf(AddSbuFunPage.AddSbuButton.isDisplayed()),String.valueOf(true));
+			Category.LowLow("STEP 1 : Check Add SBU Button VISIBLE", String.valueOf(AddSbuFunPage.AddSbuButton.isDisplayed()),String.valueOf(true));
 		} catch (AssertionError e) {
 			AddSbuBtnVisible = false;
-			Category.HighHigh("ADD SBU BUTTON VISIBLE", String.valueOf(AddSbuFunPage.AddSbuButton.isDisplayed()),String.valueOf(true));
+			Category.HighHigh("STEP 1 : Check Add SBU Button VISIBLE", String.valueOf(AddSbuFunPage.AddSbuButton.isDisplayed()),String.valueOf(true));
 		} catch (NoSuchElementException e) {
 			AddSbuBtnVisible = false;
-			Category.HighHigh("ADD SBU BUTTON VISIBLE", String.valueOf(AddSbuFunPage.AddSbuButton.isDisplayed()) , String.valueOf(true));
+			Category.HighHigh("STEP 1 : Check Add SBU Button", String.valueOf(AddSbuFunPage.AddSbuButton.isDisplayed()) , String.valueOf(true));
 		}
 		if (AddSbuBtnVisible) {
 			try {
-				Category.HighHigh("ADD SBU BUTTON ENABLE", String.valueOf(AddSbuFunPage.AddSbuButton.isEnabled()),String.valueOf(true));
+				Category.HighHigh("STEP 1 : Check Add SBU Button ENABLE", String.valueOf(AddSbuFunPage.AddSbuButton.isEnabled()),String.valueOf(true));
 			} catch (AssertionError e) {
 				AddSbuBtnEnable = false;
-				Category.HighHigh("ADD SBU BUTTON ENABLE", String.valueOf(AddSbuFunPage.AddSbuButton.isEnabled()),String.valueOf(true));
+				Category.HighHigh("STEP 1 : Check Add SBU Button ENABLE", String.valueOf(AddSbuFunPage.AddSbuButton.isEnabled()),String.valueOf(true));
 			}
 
-			if (AddSbuBtnEnable) {
-
+			if (AddSbuBtnVisible) {
+				try {
+					Category.HighHigh("STEP 1 : Check Add SBU Button-FONT-SIZE", String.valueOf(AddSbuUIPage.SBUbutton.getCssValue("font-size")),String.valueOf("14px"));
+				} catch (AssertionError e) {
+					AddSbuBtnEnable = false;
+					Category.HighHigh("STEP 1 : Check Add SBU Button-FONT-SIZE", String.valueOf(AddSbuUIPage.SBUbutton.getCssValue("font-size")),String.valueOf("14px"));
+				}
+				
+				try {
+					Category.HighHigh("STEP 1 : Check Add SBU Button-POSITION", String.valueOf(AddSbuUIPage.SBUbutton.getSize()),String.valueOf("(180, 32)"));
+				} catch (AssertionError e) {
+					AddSbuBtnEnable = false;
+					Category.HighHigh("STEP 1 : Check Add SBU Button-POSITION", String.valueOf(AddSbuUIPage.SBUbutton.getSize()),String.valueOf("(180, 32)"));
+				}
+				try {
+					Category.HighHigh("STEP 1 : Check Add SBU Button-SPELLING", String.valueOf(AddSbuUIPage.SBUbutton.getText()),String.valueOf("Add SBU"));
+				} catch (AssertionError e) {
+					AddSbuBtnEnable = false;
+					Category.HighHigh("STEP 1 : Check Add SBU Button-SPELLING", String.valueOf(AddSbuUIPage.SBUbutton.getText()),String.valueOf("Add SBU"));
+				}
+				try {
+					Category.HighHigh("STEP 1 : Check Add SBU Button-BORDER-RADIUS", String.valueOf(AddSbuUIPage.SBUbutton.getCssValue("border-Radius")),String.valueOf("2px"));
+				} catch (AssertionError e) {
+					AddSbuBtnEnable = false;
+					Category.HighHigh("STEP 1 : Check Add SBU Button-BORDER-RADIUS", String.valueOf(AddSbuUIPage.SBUbutton.getCssValue("border-Radius")),String.valueOf("2px"));
+				}
+				
 			}
 
 		}
@@ -3023,7 +3055,8 @@ PageFactory.initElements(driver, sbuui);
 	}
 
 	public static void SbuText() {
-		PageFactory.initElements(driver, asup);
+		PageFactory.initElements(driver, asup); 
+		
 	}
 
 	public static void DesText() {
@@ -3032,13 +3065,154 @@ PageFactory.initElements(driver, sbuui);
 
 	public static void SbuTextBox() {
 		PageFactory.initElements(driver, asup);
+		try {
+			Category.LowLow("STEP 7 : Check SBU TextBox-DISPLAYED", String.valueOf(AddSbuUIPage.SBUtextbox.isDisplayed()),String.valueOf(true));
+		} catch (AssertionError e) {
+			SbuTextBoxVisible = false;
+			Category.HighHigh("STEP 7 : Check SBU TextBox-DISPLAYED", String.valueOf(AddSbuUIPage.SBUtextbox.isDisplayed()),String.valueOf(true));
+		} catch (NoSuchElementException e) {
+			SbuTextBoxVisible = false;
+			Category.HighHigh("STEP 7 : Check SBU TextBox-DISPLAYED", String.valueOf(AddSbuUIPage.SBUtextbox.isDisplayed()) , String.valueOf(true));
+		}
+		if (SbuTextBoxVisible) {
+			try {
+				Category.HighHigh("STEP 7 : Check SBU TextBox-ENABLED", String.valueOf(AddSbuUIPage.SBUtextbox.isEnabled()),String.valueOf(true));
+			} catch (AssertionError e) {
+				AddSbuBtnEnable = false;
+				Category.HighHigh("STEP 7 : Check SBU TextBox-ENABLED", String.valueOf(AddSbuUIPage.SBUtextbox.isEnabled()),String.valueOf(true));
+			}
+
+			if (SbuTextBoxEnable) {
+				try {
+					Category.HighHigh("STEP 7 : Check SBU TextBox-POSITION", String.valueOf(AddSbuUIPage.SBUtextbox.getLocation()),String.valueOf("(417, 189)"));
+				} catch (AssertionError e) {
+					AddSbuBtnEnable = false;
+					Category.HighHigh("STEP 7 : Check SBU TextBox-POSITION", String.valueOf(AddSbuUIPage.SBUtextbox.getLocation()),String.valueOf("(417, 189)"));
+				}
+				
+				try {
+					Category.HighHigh("STEP 7 : Check SBU TextBox-FONT-SIZE", String.valueOf(AddSbuUIPage.SBUtextbox.getCssValue("font-size")),String.valueOf("14px"));
+				} catch (AssertionError e) {
+					AddSbuBtnEnable = false;
+					Category.HighHigh("STEP 7 : Check SBU TextBox-FONT-SIZE", String.valueOf(AddSbuUIPage.SBUtextbox.getCssValue("font-size")),String.valueOf("14px"));
+				}
+				try {
+					Category.HighHigh("STEP 7 : Check SBU TextBox-FONT-STYLE", String.valueOf(AddSbuUIPage.SBUtextbox.getCssValue("font-style")),String.valueOf("normal"));
+				} catch (AssertionError e) {
+					AddSbuBtnEnable = false;
+					Category.HighHigh("STEP 7 : Check SBU TextBox-FONT-STYLE", String.valueOf(AddSbuUIPage.SBUtextbox.getCssValue("font-style")),String.valueOf("normal"));
+				}
+				try {
+					Category.HighHigh("STEP 7 : Check SBU TextBox-SIZE", String.valueOf(AddSbuUIPage.SBUtextbox.getSize()),String.valueOf("(256, 32)"));
+				} catch (AssertionError e) {
+					AddSbuBtnEnable = false;
+					Category.HighHigh("STEP 7 : Check SBU TextBox-SIZE", String.valueOf(AddSbuUIPage.SBUtextbox.getSize()),String.valueOf("(256, 32)"));
+				}
+				
+			}
+
+		}
 	}
 
 	public static void DesTextBox() {
 		PageFactory.initElements(driver, asup);
-	}
+		try {
+			Category.LowLow("STEP 8 : Check SBU Description TextBox-DISPLAYED", String.valueOf(AddSbuUIPage.Descriptiontextbox.isDisplayed()),String.valueOf(true));
+		} catch (AssertionError e) {
+			SbuDesTextBoxVisible = false;
+			Category.HighHigh("STEP 8 : Check SBU Description TextBox-DISPLAYED", String.valueOf(AddSbuUIPage.Descriptiontextbox.isDisplayed()),String.valueOf(true));
+		} catch (NoSuchElementException e) {
+			SbuDesTextBoxVisible = false;
+			Category.HighHigh("STEP 8 : Check SBU Description TextBox-DISPLAYED", String.valueOf(AddSbuUIPage.Descriptiontextbox.isDisplayed()) , String.valueOf(true));
+		}
+		if (SbuDesTextBoxVisible) {
+			try {
+				Category.HighHigh("STEP 8 : Check SBU Description TextBox-ENABLED", String.valueOf(AddSbuUIPage.Descriptiontextbox.isEnabled()),String.valueOf(true));
+			} catch (AssertionError e) {
+				SbuDesTextBoxEnable = false;
+				Category.HighHigh("STEP 8 : Check SBU Description TextBox-ENABLED", String.valueOf(AddSbuUIPage.Descriptiontextbox.isEnabled()),String.valueOf(true));
+			}
+
+			if (SbuDesTextBoxEnable) {
+				try {
+					Category.HighHigh("STEP 8 : Check SBU Description TextBox-POSITION", String.valueOf(AddSbuUIPage.Descriptiontextbox.getLocation()),String.valueOf("(693, 189)"));
+				} catch (AssertionError e) {
+					AddSbuBtnEnable = false;
+					Category.HighHigh("STEP 8 : Check SBU Description TextBox-POSITION", String.valueOf(AddSbuUIPage.Descriptiontextbox.getLocation()),String.valueOf("(693, 189)"));
+				}
+				
+				try {
+					Category.HighHigh("STEP 8 : Check SBU Description TextBox-FONT-SIZE", String.valueOf(AddSbuUIPage.Descriptiontextbox.getCssValue("font-size")),String.valueOf("14px"));
+				} catch (AssertionError e) {
+					AddSbuBtnEnable = false;
+					Category.HighHigh("STEP 8 : Check SBU Description TextBox-FONT-SIZE", String.valueOf(AddSbuUIPage.Descriptiontextbox.getCssValue("font-size")),String.valueOf("14px"));
+				}
+				try {
+					Category.HighHigh("STEP 8 : Check SBU Description TextBox-FONT-STYLE", String.valueOf(AddSbuUIPage.Descriptiontextbox.getCssValue("font-style")),String.valueOf("normal"));
+				} catch (AssertionError e) {
+					AddSbuBtnEnable = false;
+					Category.HighHigh("STEP 8 : Check SBU Description TextBox-FONT-STYLE", String.valueOf(AddSbuUIPage.Descriptiontextbox.getCssValue("font-style")),String.valueOf("normal"));
+				}
+				try {
+					Category.HighHigh("STEP 8 : Check SBU Description TextBox-SIZE", String.valueOf(AddSbuUIPage.Descriptiontextbox.getSize()),String.valueOf("(256, 32)"));
+				} catch (AssertionError e) {
+					AddSbuBtnEnable = false;
+					Category.HighHigh("STEP 8 : Check SBU Description TextBox-SIZE", String.valueOf(AddSbuUIPage.Descriptiontextbox.getSize()),String.valueOf("(256, 32)"));
+				}
+			}
+
+		}
+		}
 
 	public static void SbuSaveBtn() {
 		PageFactory.initElements(driver, asup);
+		try {
+			Category.LowLow("STEP 10 : Check SBU Save Button-VISIBILITY", String.valueOf(AddSbuUIPage.SBUsavebutton.isDisplayed()),String.valueOf(true));
+		} catch (AssertionError e) {
+			SaveSbuBtnVisible = false;
+			Category.HighHigh("STEP 10 : Check SBU Save Button-VISIBILITY", String.valueOf(AddSbuUIPage.SBUsavebutton.isDisplayed()),String.valueOf(true));
+		} catch (NoSuchElementException e) {
+			SaveSbuBtnVisible = false;
+			Category.HighHigh("STEP 10 : Check SBU Save Button-VISIBILITY", String.valueOf(AddSbuUIPage.SBUsavebutton.isDisplayed()) , String.valueOf(true));
+		}
+		if (SaveSbuBtnVisible) {
+			try {
+				Category.HighHigh("STEP 10 : Check SBU Save Button- ENABLE", String.valueOf(AddSbuUIPage.SBUsavebutton.isEnabled()),String.valueOf(true));
+			} catch (AssertionError e) {
+				SaveSbuBtnEnable = false;
+				Category.HighHigh("STEP 10 : Check SBU Save Button-ENABLE", String.valueOf(AddSbuUIPage.SBUsavebutton.isEnabled()),String.valueOf(true));
+			}
+
+			if (SaveSbuBtnEnable) {
+				try {
+					Category.HighHigh("STEP 10 : Check SBU Save Button-FONT-SIZE", String.valueOf(AddSbuUIPage.SBUsavebutton.getCssValue("font-size")),String.valueOf("14px"));
+				} catch (AssertionError e) {
+					AddSbuBtnEnable = false;
+					Category.HighHigh("STEP 10 : Check SBU Save Button-FONT-SIZE", String.valueOf(AddSbuUIPage.SBUsavebutton.getCssValue("font-size")),String.valueOf("14px"));
+				}
+				
+				try {
+					Category.HighHigh("STEP 10 : Check SBU Save Button-POSITION", String.valueOf(AddSbuUIPage.SBUsavebutton.getSize()),String.valueOf("(60, 32)"));
+				} catch (AssertionError e) {
+					AddSbuBtnEnable = false;
+					Category.HighHigh("STEP 10 : Check SBU Save Button-POSITION", String.valueOf(AddSbuUIPage.SBUsavebutton.getSize()),String.valueOf("(60, 32)"));
+				}
+				try {
+					Category.HighHigh("STEP 10 : Check SBU Save Button-SPELLING", String.valueOf(AddSbuUIPage.SBUsavebutton.getText()),String.valueOf("Save"));
+				} catch (AssertionError e) {
+					AddSbuBtnEnable = false;
+					Category.HighHigh("STEP 10 : Check SBU Save Button-SPELLING", String.valueOf(AddSbuUIPage.SBUsavebutton.getText()),String.valueOf("Save"));
+				}
+				try {
+					Category.HighHigh("STEP 10 : Check SBU Save Button-CURSOR", String.valueOf(AddSbuUIPage.SBUsavebutton.getCssValue("cursor")),String.valueOf("pointer"));
+				} catch (AssertionError e) {
+					AddSbuBtnEnable = false;
+					Category.HighHigh("STEP 10 : Check SBU Save Button-CURSOR", String.valueOf(AddSbuUIPage.SBUsavebutton.getCssValue("cursor")),String.valueOf("pointer"));
+				}
+				
+			}
+
+		}
 	}
+
 }
