@@ -2592,7 +2592,7 @@ PageFactory.initElements(driver, sbuui);
 
 //	@Test(priority = 7)
 	public static void SbusaveButton() throws InterruptedException {
-
+		PageFactory.initElements(driver, asup);
 		// check if element visible
 
 		boolean ActualElement = AddSbuUIPage.SBUsavebutton.isDisplayed();

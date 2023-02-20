@@ -249,7 +249,7 @@ public class AddSbuFunTest extends DriverIntialization {
 		FileInputStream file = new FileInputStream(
 				System.getProperty("user.dir") + "\\src\\test\\resources\\Excel-sheets\\SampleExcel.xlsx");
 		XSSFWorkbook workbook = new XSSFWorkbook(file);
-		XSSFSheet sheet = workbook.getSheet("AddSbu");
+		XSSFSheet sheet = workbook.getSheet("add");
 
 		int rowcount = sheet.getLastRowNum();
 		for (int i = 0; i <= rowcount; i++) {
@@ -277,9 +277,9 @@ public class AddSbuFunTest extends DriverIntialization {
 				AddSbuFunPage.Des.sendKeys(description);
 				testCase = extent.createTest("STEP 9 : INPUT SBU and Descreption Data- Descreption Data");
 				try {
-					Assert.assertEquals(AddSbuFunPage.Des.getAttribute("value"), sbu);
+					Assert.assertEquals(AddSbuFunPage.Des.getAttribute("value"), description);
 					testCase.log(Status.INFO, "Actual Data : " + AddSbuFunPage.Des.getAttribute("value"));
-					testCase.log(Status.INFO, "Expected Data : " + sbu);
+					testCase.log(Status.INFO, "Expected Data : " + description);
 					testCase.log(Status.PASS, "Pass this test script");
 				} catch (AssertionError e) {
 					testCase.log(Status.INFO, "Actual Data : " + AddSbuFunPage.Des.getAttribute("value"));
