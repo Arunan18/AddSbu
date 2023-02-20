@@ -12,7 +12,7 @@ public class AddSbuFunPage {
 	public static WebElement Plant;
 	@FindBy(xpath = "//div[@class='sc-dnqmqq bxMwVY']")
 	public static WebElement SBU;
-	@FindBy(xpath = "//button[@type='button'][@class='ant-btn sc-gZMcBi dMdnOw']")
+	@FindBy(xpath = "//div[@class='sc-bxivhb hiMnNy']/div/button")
 	public static WebElement AddSbuButton;
 	@FindBy(id = "sub_business_unit")
 	public static WebElement SBUName;
@@ -28,4 +28,8 @@ public class AddSbuFunPage {
 	public static WebElement NextPageBtn;
 	@FindBy(xpath = "//tbody[@class='ant-table-tbody']/tr[2]/td[1]")
 	public static WebElement FirstRowdata;
+	@FindBy(xpath = "//div[@class='ant-notification-notice-message']")
+	public static WebElement sucessmessage;
+	@FindBy(xpath = "//form[@class='ant-legacy-form ant-legacy-form-horizontal sc-gqjmRU brqWbd']/div/div[1]/div[1]/div[1]")
+	public static WebElement Validation;
 }

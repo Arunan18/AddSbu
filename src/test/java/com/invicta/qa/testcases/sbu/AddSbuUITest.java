@@ -7,8 +7,6 @@ import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.AssertJUnit;
-
-import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.invicta.qa.base.DriverIntialization;
 import com.invicta.qa.pages.sbu.AddSbuFunPage;
@@ -125,7 +123,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.INFO, "ExpectedElement :- " + ExpectedElement);
 			testCase.log(Status.FAIL, "No element");
 		}
-		Thread.sleep(2000);
+	
 
 //				// ENABILITY
 //
@@ -156,7 +154,6 @@ PageFactory.initElements(driver, sbuui);
 //
 //				}
 
-		Thread.sleep(2000);
 
 		// SIZE
 
@@ -189,7 +186,6 @@ PageFactory.initElements(driver, sbuui);
 
 		}
 
-		Thread.sleep(2000);
 
 //		size
 		Dimension ActualSize = AddSbuUIPage.SBUbutton.getSize();
@@ -231,7 +227,6 @@ PageFactory.initElements(driver, sbuui);
 
 		}
 
-		Thread.sleep(2000);
 
 		// SPELLING
 
@@ -266,7 +261,6 @@ PageFactory.initElements(driver, sbuui);
 
 		}
 
-		Thread.sleep(2000);
 
 		// BORDER-COLOR
 
@@ -293,7 +287,6 @@ PageFactory.initElements(driver, sbuui);
 
 		}
 
-		Thread.sleep(2000);
 
 		// OPACITY
 		try {
@@ -451,7 +444,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase = extent.createTest("FONT-COLOR-FAILED");
 			testCase.log(Status.FAIL, "No Element");
 		}
-		Thread.sleep(2000);
+	
 
 		// FONT-TYPE
 
@@ -481,7 +474,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase = extent.createTest("FONT-TYPE-FAILED");
 			testCase.log(Status.FAIL, "No Element");
 		}
-		Thread.sleep(2000);
+	
 
 		// FONT-SIZE
 
@@ -511,7 +504,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase = extent.createTest("FONT-SIZE-FAILED");
 			testCase.log(Status.FAIL, "No Element");
 		}
-		Thread.sleep(2000);
+	
 
 		// BOX-SHADOW
 
@@ -541,7 +534,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase = extent.createTest("BOX-SHADOW-FAILED");
 			testCase.log(Status.FAIL, "No Element");
 		}
-		Thread.sleep(2000);
+	
 
 		// FONT-WEIGHT
 
@@ -571,7 +564,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase = extent.createTest("FONT-WEIGHT-FAILED");
 			testCase.log(Status.FAIL, "No Element");
 		}
-		Thread.sleep(2000);
+		
 		System.out.println("*******Add Sbu Button End********");
 	}
 
@@ -581,7 +574,7 @@ PageFactory.initElements(driver, sbuui);
 		System.out.println("*******Add Sbu Modal Start********");
 
 		// ***** element visible test
-		Thread.sleep(1000);
+		
 		boolean AcctualVisible = AddSbuUIPage.modal.isDisplayed();
 		boolean ExpectedVisible = true;
 
@@ -603,7 +596,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.INFO, "Element not available");
 			testCase.log(Status.FAIL, "No Element");
 		}
-		Thread.sleep(2000);
+	
 
 		// ***** element position test
 
@@ -634,7 +627,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.INFO, "ExpectedSize :- " + ExpectedLocation);
 			testCase.log(Status.FAIL, "Wrong Location");
 		}
-		Thread.sleep(2000);
+		
 
 		// ***** element size
 
@@ -659,8 +652,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.INFO, "ExpectedSize :- " + ExpectedSize);
 			testCase.log(Status.FAIL, "Wrong Size");
 		}
-		Thread.sleep(2000);
-
+		
 		// ***** element background-color
 
 		String ActualButtonColor = AddSbuUIPage.modal.getCssValue("background-color");
@@ -684,7 +676,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.INFO, "ExpectedButtonColor :- " + ExpectedButtonColor);
 			testCase.log(Status.FAIL, "Wrong Button Color");
 		}
-		Thread.sleep(2000);
+	
 
 		// ***** element border-color
 
@@ -710,7 +702,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.INFO, "ExpectedBorderColor :- " + ExpectedBorderColor);
 			testCase.log(Status.FAIL, "Wrong Border Color");
 		}
-		Thread.sleep(2000);
+
 
 		// ***** element overflow
 
@@ -736,7 +728,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.INFO, "ExpectedOverflow :- " + ExpectedOverflow);
 			testCase.log(Status.FAIL, "Wrong overflow");
 		}
-		Thread.sleep(2000);
+	
 
 		// ***** element margin
 
@@ -762,7 +754,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.INFO, "ExpectedMargin :- " + ExpectedMargin);
 			testCase.log(Status.FAIL, "Wrong Margin");
 		}
-		Thread.sleep(2000);
+	
 
 		// ***** element cursor
 
@@ -787,7 +779,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.INFO, "ExpectedSize :- " + ExpectedActions);
 			testCase.log(Status.FAIL, "wrong cursor type");
 		}
-		Thread.sleep(2000);
+	
 
 		// ***** element z- index
 
@@ -812,7 +804,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.INFO, "ExpectedZ-index :- " + ExpectedZindex);
 			testCase.log(Status.FAIL, "wrong z-index type");
 		}
-		Thread.sleep(2000);
+	
 
 		// ***** click-on element
 
@@ -840,7 +832,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.INFO, "modalExpected :- " + ExpectedZindex);
 			testCase.log(Status.FAIL, "wrong modal header");
 		}
-		Thread.sleep(2000);
+	
 
 //		// identify modal content
 //		String ActualmodalContent= AddSbuUIPage.modalcontent.getText();
@@ -2233,9 +2225,9 @@ PageFactory.initElements(driver, sbuui);
 						System.out.println("Position :" + actualImageLocation);
 						testCase = extent.createTest("STEP 7 : Check SBU TextBox-POSITION");
 						try {
-							Thread.sleep(1000);
+//							Thread.sleep(1000);
 							Assert.assertEquals(actualImageLocation, ExpectedImageLocation);
-							Thread.sleep(3000);
+//							Thread.sleep(3000);
 							testCase.log(Status.INFO, "Actual Image Position :- " + actualImageLocation);
 							testCase.log(Status.INFO, "Expected Image Position :- " + ExpectedImageLocation);
 							testCase.log(Status.INFO, "Correct Image Position");
@@ -2342,7 +2334,7 @@ PageFactory.initElements(driver, sbuui);
 							testCase.log(Status.INFO, "wrong Size");
 							testCase.log(Status.FAIL, "wrong Size");
 						}
-						Thread.sleep(2000);
+//						Thread.sleep(2000);
 
 						// BORDER COLOUR
 
@@ -2437,9 +2429,9 @@ PageFactory.initElements(driver, sbuui);
 						System.out.println("Position :" + actualImageLocation);
 						testCase = extent.createTest("STEP 8 : Check SBU Description TextBox-POSITION");
 						try {
-							Thread.sleep(1000);
+//							Thread.sleep(1000);
 							Assert.assertEquals(actualImageLocation, ExpectedImageLocation);
-							Thread.sleep(3000);
+//							Thread.sleep(3000);
 							testCase.log(Status.INFO, "Actual Image Position :- " + actualImageLocation);
 							testCase.log(Status.INFO, "Expected Image Position :- " + ExpectedImageLocation);
 							testCase.log(Status.INFO, "Correct Image Position");
@@ -2546,7 +2538,7 @@ PageFactory.initElements(driver, sbuui);
 							testCase.log(Status.INFO, "wrong Size");
 							testCase.log(Status.FAIL, "wrong Size");
 						}
-						Thread.sleep(2000);
+//						Thread.sleep(2000);
 
 						// BORDER COLOUR
 
@@ -2620,7 +2612,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.FAIL, "No element");
 
 		}
-		Thread.sleep(2000);
+//		Thread.sleep(2000);
 
 		// check position
 
@@ -2651,7 +2643,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.INFO, "ExpectedSize :- " + ExpectedLocation);
 			testCase.log(Status.FAIL, "Wrong Location");
 		}
-		Thread.sleep(2000);
+//		Thread.sleep(2000);
 
 //			 check font size
 
@@ -2676,7 +2668,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.INFO, "ExpectedSize :- " + ExpectedFontSize);
 			testCase.log(Status.FAIL, "Wrong Font Size");
 		}
-		Thread.sleep(2000);
+//		Thread.sleep(2000);
 
 //			 check the size 
 
@@ -2701,7 +2693,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.INFO, "ExpectedSize :- " + ExpectedSize);
 			testCase.log(Status.FAIL, "Wrong Size");
 		}
-		Thread.sleep(2000);
+//		Thread.sleep(2000);
 
 //	            check the enable
 
@@ -2725,7 +2717,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.INFO, "ExpectedElementEnable :- " + ExpectedElementEnable);
 			testCase.log(Status.FAIL, "Element is not enable");
 		}
-		Thread.sleep(2000);
+//		Thread.sleep(2000);
 
 //	            check the button color
 
@@ -2751,7 +2743,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.INFO, "ExpectedButtonColor :- " + ExpectedButtonColor);
 			testCase.log(Status.FAIL, "Wrong Button Color");
 		}
-		Thread.sleep(2000);
+//		Thread.sleep(2000);
 
 //	            check the border color
 
@@ -2777,7 +2769,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.INFO, "ExpectedBorderColor :- " + ExpectedBorderColor);
 			testCase.log(Status.FAIL, "Wrong Border Color");
 		}
-		Thread.sleep(2000);
+//		Thread.sleep(2000);
 
 //	            check the font type 
 
@@ -2805,7 +2797,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.INFO, "ExpectedFontType :- " + ExpectedFontType);
 			testCase.log(Status.FAIL, "Wrong Font Type");
 		}
-		Thread.sleep(2000);
+//		Thread.sleep(2000);
 
 //	                    check font color
 
@@ -2827,7 +2819,7 @@ PageFactory.initElements(driver, sbuui);
 
 			testCase.log(Status.FAIL, "wrong font Colour");
 		}
-		Thread.sleep(2000);
+//		Thread.sleep(2000);
 
 //			cursor
 
@@ -2852,7 +2844,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.INFO, "ExpectedSize :- " + ExpectedActions);
 			testCase.log(Status.FAIL, "drop dow not auto");
 		}
-		Thread.sleep(2000);
+//		Thread.sleep(2000);
 
 //			text spelling
 
@@ -2879,7 +2871,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.FAIL, "wrong");
 		}
 
-		Thread.sleep(2000);
+//		Thread.sleep(2000);
 
 //			padding
 
@@ -2904,7 +2896,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.INFO, "Expectedvalue :- " + Expectedvalue);
 			testCase.log(Status.FAIL, "Wrong Value");
 		}
-		Thread.sleep(2000);
+//		Thread.sleep(2000);
 
 //	  		border radius
 
@@ -2929,7 +2921,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.INFO, "Expectedradius :- " + Expectedradius);
 			testCase.log(Status.FAIL, "Wrong Value");
 		}
-		Thread.sleep(2000);
+//		Thread.sleep(2000);
 
 //			opacity
 
@@ -2954,7 +2946,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.INFO, "Expectedopacity :- " + Expectedopacity);
 			testCase.log(Status.FAIL, "Wrong Value");
 		}
-		Thread.sleep(2000);
+//		Thread.sleep(2000);
 
 //			font weight
 
@@ -2979,7 +2971,7 @@ PageFactory.initElements(driver, sbuui);
 			testCase.log(Status.INFO, "Expectedfontweight :- " + Expectedfontweight);
 			testCase.log(Status.FAIL, "Wrong font weight");
 		}
-		Thread.sleep(2000);
+//		Thread.sleep(2000);
 	}
 
 //	****************************************************************************************************************
@@ -2996,15 +2988,21 @@ PageFactory.initElements(driver, sbuui);
  
 	public static void AddSbuButton() { 
 		PageFactory.initElements(driver, asup); 
+		testCase = extent.createTest("STEP 1 : Check Add SBU Button VISIBLE");
 		try {
-			Category.LowLow("STEP 1 : Check Add SBU Button VISIBLE", String.valueOf(AddSbuFunPage.AddSbuButton.isDisplayed()),String.valueOf(true));
+			Assert.assertEquals(AddSbuFunPage.AddSbuButton.isDisplayed(), true);
+			testCase.log(Status.INFO, "STEP 1 : Check Add SBU Button VISIBLE ActualResults : " + AddSbuFunPage.AddSbuButton.isDisplayed()).assignCategory("High-Severity");
+			testCase.log(Status.INFO,  "STEP 1 : Check Add SBU Button VISIBLE ExpectedResults : " + true).assignCategory("High-Priority");
+			testCase.log(Status.PASS,  "STEP 1 : Check Add SBU Button VISIBLE Script PASS");
 		} catch (AssertionError e) {
 			AddSbuBtnVisible = false;
-			Category.HighHigh("STEP 1 : Check Add SBU Button VISIBLE", String.valueOf(AddSbuFunPage.AddSbuButton.isDisplayed()),String.valueOf(true));
-		} catch (NoSuchElementException e) {
+			testCase.log(Status.INFO,  "STEP 1 : Check Add SBU Button VISIBLE ActualResults : " + AddSbuFunPage.AddSbuButton.isDisplayed()).assignCategory("High-Severity");
+			testCase.log(Status.INFO,  "STEP 1 : Check Add SBU Button VISIBLE ExpectedResults : " + true).assignCategory("High-Priority");
+			testCase.log(Status.FAIL,  "STEP 1 : Check Add SBU Button VISIBLE Script FAIL");
+			} catch (NoSuchElementException e) {
+			testCase.log(Status.FAIL, "Dont Have STEP 1 : Check Add SBU Button VISIBLE Locator");
 			AddSbuBtnVisible = false;
-			Category.HighHigh("STEP 1 : Check Add SBU Button", String.valueOf(AddSbuFunPage.AddSbuButton.isDisplayed()) , String.valueOf(true));
-		}
+			}
 		if (AddSbuBtnVisible) {
 			try {
 				Category.HighHigh("STEP 1 : Check Add SBU Button ENABLE", String.valueOf(AddSbuFunPage.AddSbuButton.isEnabled()),String.valueOf(true));
@@ -3012,7 +3010,7 @@ PageFactory.initElements(driver, sbuui);
 				AddSbuBtnEnable = false;
 				Category.HighHigh("STEP 1 : Check Add SBU Button ENABLE", String.valueOf(AddSbuFunPage.AddSbuButton.isEnabled()),String.valueOf(true));
 			}
-
+ 
 			if (AddSbuBtnVisible) {
 				try {
 					Category.HighHigh("STEP 1 : Check Add SBU Button-FONT-SIZE", String.valueOf(AddSbuUIPage.SBUbutton.getCssValue("font-size")),String.valueOf("14px"));
@@ -3063,7 +3061,7 @@ PageFactory.initElements(driver, sbuui);
 		PageFactory.initElements(driver, asup);
 	}
 
-	public static void SbuTextBox() {
+	public static void SbuTextBox() { 
 		PageFactory.initElements(driver, asup);
 		try {
 			Category.LowLow("STEP 7 : Check SBU TextBox-DISPLAYED", String.valueOf(AddSbuUIPage.SBUtextbox.isDisplayed()),String.valueOf(true));
@@ -3166,12 +3164,21 @@ PageFactory.initElements(driver, sbuui);
 
 	public static void SbuSaveBtn() {
 		PageFactory.initElements(driver, asup);
+		testCase = extent.createTest("STEP 10 : Check SBU Save Button-VISIBILITY");
 		try {
+			Assert.assertEquals(AddSbuUIPage.SBUsavebutton.isDisplayed(), true);
+			testCase.log(Status.INFO,  "STEP 10 : Check SBU Save Button-VISIBILITY ActualResults : " + AddSbuUIPage.SBUsavebutton.isDisplayed()).assignCategory("Low-Severity");
+			testCase.log(Status.INFO,  "STEP 10 : Check SBU Save Button-VISIBILITY ExpectedResults : " + true).assignCategory("Low-Priority");
+			testCase.log(Status.PASS,  "STEP 10 : Check SBU Save Button-VISIBILITY Script PASS");
 			Category.LowLow("STEP 10 : Check SBU Save Button-VISIBILITY", String.valueOf(AddSbuUIPage.SBUsavebutton.isDisplayed()),String.valueOf(true));
 		} catch (AssertionError e) {
+			testCase.log(Status.INFO,  "STEP 10 : Check SBU Save Button-VISIBILITY ActualResults : " + AddSbuUIPage.SBUsavebutton.isDisplayed()).assignCategory("Low-Severity");
+			testCase.log(Status.INFO,  "STEP 10 : Check SBU Save Button-VISIBILITY ExpectedResults : " + true).assignCategory("Low-Priority");
+			testCase.log(Status.FAIL,  "STEP 10 : Check SBU Save Button-VISIBILITY Script FAIL");
 			SaveSbuBtnVisible = false;
 			Category.HighHigh("STEP 10 : Check SBU Save Button-VISIBILITY", String.valueOf(AddSbuUIPage.SBUsavebutton.isDisplayed()),String.valueOf(true));
 		} catch (NoSuchElementException e) {
+			testCase.log(Status.FAIL, "Dont Have SBU Save Button-VISIBILITY Locator");
 			SaveSbuBtnVisible = false;
 			Category.HighHigh("STEP 10 : Check SBU Save Button-VISIBILITY", String.valueOf(AddSbuUIPage.SBUsavebutton.isDisplayed()) , String.valueOf(true));
 		}
